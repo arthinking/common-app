@@ -29,7 +29,6 @@
     <string name="menu">menu</string>
     <string name="edit_message">message</string>
     <string name="button_send">send</string>
-    
     <string name="about_msg">&lt;b>SlidingMenu&lt;/b> is an Open Source Android library 
         that allows developers to easily create applications with sliding menus like those 
         made popular in the Google+, YouTube, and Facebook applications. 
@@ -59,5 +58,8 @@
 		either express or implied. See the License for the specific 
 		language governing permissions and limitations under the License.</string>
     <string name="no_email">Sorry, I couldn\'t find any e-mail apps on your phone</string>
+    <string name="title_activity_main_time_line_parent">MainTimeLineParentActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
 
 </resources>

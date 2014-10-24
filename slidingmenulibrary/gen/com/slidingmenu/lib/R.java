@@ -121,16 +121,77 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
          */
         public static int viewBehind=0x7f010002;
     }
+    public static final class bool {
+        public static int abc_action_bar_embed_tabs_pre_jb=0x7f030001;
+        public static int abc_action_bar_expanded_action_views_exclusive=0x7f030000;
+        public static int abc_config_allowActionMenuItemTextWithIcon=0x7f030002;
+    }
+    public static final class dimen {
+        /**  Minimum width of the search view text entry area. 
+ Minimum width of the search view text entry area. 
+ Minimum width of the search view text entry area. 
+         */
+        public static int abc_search_view_text_min_width=0x7f050000;
+        /**  The platform's desired fixed height for a dialog along the major axis
+         (the screen is in portrait). This may be either a fraction or a dimension.
+         */
+        public static int dialog_fixed_height_major=0x7f050003;
+        /**  The platform's desired fixed height for a dialog along the minor axis
+         (the screen is in landscape). This may be either a fraction or a dimension.
+         */
+        public static int dialog_fixed_height_minor=0x7f050004;
+        /**  The platform's desired fixed width for a dialog along the major axis
+         (the screen is in landscape). This may be either a fraction or a dimension.
+         */
+        public static int dialog_fixed_width_major=0x7f050001;
+        /**  The platform's desired fixed width for a dialog along the minor axis
+         (the screen is in portrait). This may be either a fraction or a dimension.
+         */
+        public static int dialog_fixed_width_minor=0x7f050002;
+    }
     public static final class id {
-        public static int fullscreen=0x7f030003;
-        public static int left=0x7f030000;
-        public static int margin=0x7f030002;
-        public static int right=0x7f030001;
-        public static int selected_view=0x7f030004;
-        public static int slidingmenumain=0x7f030005;
+        public static int fullscreen=0x7f070003;
+        public static int left=0x7f070000;
+        public static int margin=0x7f070002;
+        public static int right=0x7f070001;
+        public static int selected_view=0x7f070004;
+        public static int slidingmenumain=0x7f070005;
+    }
+    public static final class integer {
+        /**  The maximum number of action buttons that should be permitted within
+         an action bar/action mode. This will be used to determine how many
+         showAsAction="ifRoom" items can fit. "always" items can override this. 
+ The maximum number of action buttons that should be permitted within
+         an action bar/action mode. This will be used to determine how many
+         showAsAction="ifRoom" items can fit. "always" items can override this. 
+ The maximum number of action buttons that should be permitted within
+         an action bar/action mode. This will be used to determine how many
+         showAsAction="ifRoom" items can fit. "always" items can override this. 
+ The maximum number of action buttons that should be permitted within
+         an action bar/action mode. This will be used to determine how many
+         showAsAction="ifRoom" items can fit. "always" items can override this. 
+         */
+        public static int abc_max_action_buttons=0x7f040000;
     }
     public static final class layout {
         public static int slidingmenumain=0x7f020000;
+    }
+    public static final class string {
+        public static int abc_action_bar_home_description=0x7f060001;
+        public static int abc_action_bar_home_description_format=0x7f060004;
+        public static int abc_action_bar_home_subtitle_description_format=0x7f060005;
+        public static int abc_action_bar_up_description=0x7f060002;
+        public static int abc_action_menu_overflow_description=0x7f060003;
+        public static int abc_action_mode_done=0x7f060000;
+        public static int abc_activity_chooser_view_see_all=0x7f06000c;
+        public static int abc_activitychooserview_choose_application=0x7f06000b;
+        public static int abc_searchview_description_clear=0x7f060008;
+        public static int abc_searchview_description_query=0x7f060007;
+        public static int abc_searchview_description_search=0x7f060006;
+        public static int abc_searchview_description_submit=0x7f060009;
+        public static int abc_searchview_description_voice=0x7f06000a;
+        public static int abc_shareactionprovider_share_with=0x7f06000e;
+        public static int abc_shareactionprovider_share_with_application=0x7f06000d;
     }
     public static final class styleable {
         /** Attributes that can be used with a SlidingMenu.
