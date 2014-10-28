@@ -81,8 +81,10 @@ public class OAuthActivity extends AbstractAppActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.actionbar_menu_oauthactivity, menu);
+    	// MenuInflater是用来实例化Menu目录下的Menu布局文件的
+        getMenuInflater().inflate(R.menu.actionbar_menu_oauthactivity, menu);  // android:showAsAction
         refreshItem = menu.findItem(R.id.menu_refresh);
+        // 刷新，请求授权
         refresh();
         return true;
     }
@@ -92,6 +94,7 @@ public class OAuthActivity extends AbstractAppActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+            	// home键，退出程序
                 Intent intent = AccountActivity.newIntent();
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
@@ -107,9 +110,19 @@ public class OAuthActivity extends AbstractAppActivity {
 
     public void refresh() {
         webView.clearView();
-        webView.loadUrl("about:blank");
+        webView.loadUrl("about:blank");  // 加载空白页
+        // LayoutInflater作用是将layout的xml布局文件实例化为View类对象
+        /**
+         * inflate() 与 setContentView() 的区别：
+         * setContentView()一旦调用, layout就会立刻显示UI；
+         * 而inflate只会把Layout形成一个以view类实现成的对象，
+         * 有需要时再用setContentView(view)显示出来。
+         * 一般在activity中通过setContentView()将界面显示出来，
+         * 但是如果在非activity中如何对控件布局设置操作了，这就需要LayoutInflater动态加载。
+         */
         LayoutInflater inflater = (LayoutInflater) getSystemService(
                 Context.LAYOUT_INFLATER_SERVICE);
+        // 右上角刷新动画效果
         ImageView iv = (ImageView) inflater.inflate(R.layout.refresh_action_view, null);
 
         Animation rotation = AnimationUtils.loadAnimation(this, R.anim.refresh);
@@ -140,18 +153,22 @@ public class OAuthActivity extends AbstractAppActivity {
 
     private class WeiboWebViewClient extends WebViewClient {
 
+    	/**
+    	 * 在点击请求的是链接才会调用
+    	 */
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             view.loadUrl(url);
-            return true;
+            return true;  // 在当前的WebView里面跳转，不打开浏览器
         }
 
 
+        /**
+         * 在页面加载开始时调用
+         */
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
-
             if (url.startsWith(URLHelper.DIRECT_URL)) {
-
                 handleRedirectUrl(view, url);
                 view.stopLoading();
                 return;
@@ -160,6 +177,9 @@ public class OAuthActivity extends AbstractAppActivity {
 
         }
 
+        /**
+         * 错误请求处理
+         */
         @Override
         public void onReceivedError(WebView view, int errorCode, String description,
                 String failingUrl) {
@@ -167,6 +187,9 @@ public class OAuthActivity extends AbstractAppActivity {
             new SinaWeiboErrorDialog().show(getSupportFragmentManager(), "");
         }
 
+        /**
+         * 在页面加载结束时调用
+         */
         @Override
         public void onPageFinished(WebView view, String url) {
             super.onPageFinished(view, url);

@@ -132,7 +132,7 @@ public class MainTimeLineActivity extends MainTimeLineParentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        // init use info
         if (savedInstanceState != null) {
             accountBean = savedInstanceState.getParcelable("account");
         } else {
@@ -148,25 +148,26 @@ public class MainTimeLineActivity extends MainTimeLineParentActivity {
         GlobalContext.getInstance().setGroup(null);
         GlobalContext.getInstance().setAccountBean(accountBean);
         SettingUtility.setDefaultAccountId(accountBean.getUid());
-
+        // render view
         buildInterface(savedInstanceState);
-
     }
 
-
     private void buildInterface(Bundle savedInstanceState) {
-        getActionBar().setTitle(GlobalContext.getInstance().getCurrentAccountName());
-        getWindow().setBackgroundDrawable(null);
-        setContentView(R.layout.menu_right);
-        boolean phone = findViewById(R.id.menu_frame) == null;
+        // getActionBar().setTitle(GlobalContext.getInstance().getCurrentAccountName());
+    	// getActionBar().setTitle("推荐");  // 设置action bar标题
+        getWindow().setBackgroundDrawable(null);  // 设置背景图片
+        setContentView(R.layout.menu_right);  // 设置主题布局
+        boolean phone = findViewById(R.id.menu_frame) == null;  // 获取sliding menu 中的menu frame
         if (phone) {
             buildPhoneInterface(savedInstanceState);
         } else {
             buildPadInterface(savedInstanceState);
         }
 
+        // 设置自定义ActionBar的标题
         buildCustomActionBarTitle(savedInstanceState);
-
+        
+        // 初始化
         if (savedInstanceState == null) {
             initFragments();
             FragmentTransaction secondFragmentTransaction = getSupportFragmentManager()
@@ -176,6 +177,7 @@ public class MainTimeLineActivity extends MainTimeLineParentActivity {
             getSlidingMenu().showContent();
             secondFragmentTransaction.commit();
         }
+        // 配置sliding menu
         configSlidingMenu(phone);
     }
 
@@ -278,6 +280,8 @@ public class MainTimeLineActivity extends MainTimeLineParentActivity {
     }
 
     private void buildCustomActionBarTitle(Bundle savedInstanceState) {
+    	// LayoutInflater是用来找res/layout/下的xml布局文件，并且实例化；
+    	// 而findViewById()是找xml布局文件下的具体widget控件(如Button、TextView等)
         View title = getLayoutInflater().inflate(R.layout.maintimelineactivity_title_layout, null);
         titleText = (TextView) title.findViewById(R.id.tv_title);
         clickToTop = title.findViewById(R.id.tv_click_to_top);
