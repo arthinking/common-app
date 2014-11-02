@@ -193,7 +193,7 @@ public class AccountActivity extends AbstractAppActivity
                             public void onClick(DialogInterface dialog, int which) {
                                 Intent intent = new Intent(AccountActivity.this,
                                         activityList.get(which));
-                                // 请求一个新的Activity（SSOActivity）获取数据
+                                // 请求一个新的Activity（OAuthActivity）获取数据
                                 startActivityForResult(intent, ADD_ACCOUNT_REQUEST_CODE);
                             }
                         }).show();
@@ -217,7 +217,7 @@ public class AccountActivity extends AbstractAppActivity
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == ADD_ACCOUNT_REQUEST_CODE && resultCode == RESULT_OK) {
-            refresh();
+            refresh(); 
             if (data == null) {
                 return;
             }

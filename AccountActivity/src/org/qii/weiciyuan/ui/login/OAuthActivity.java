@@ -99,6 +99,7 @@ public class OAuthActivity extends AbstractAppActivity {
                 intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
                 return true;
+                // ActionBar刷新按钮
             case R.id.menu_refresh:
                 refresh();
                 return true;
@@ -169,6 +170,7 @@ public class OAuthActivity extends AbstractAppActivity {
         @Override
         public void onPageStarted(WebView view, String url, Bitmap favicon) {
             if (url.startsWith(URLHelper.DIRECT_URL)) {
+            	// 授权成功
                 handleRedirectUrl(view, url);
                 view.stopLoading();
                 return;
@@ -201,7 +203,6 @@ public class OAuthActivity extends AbstractAppActivity {
 
     private void handleRedirectUrl(WebView view, String url) {
         Bundle values = Utility.parseUrl(url);
-
         String error = values.getString("error");
         String error_code = values.getString("error_code");
 
@@ -212,8 +213,9 @@ public class OAuthActivity extends AbstractAppActivity {
 
             String access_token = values.getString("access_token");
             String expires_time = values.getString("expires_in");
+            // 设置Activity的处理结果，返回给上一个Activity
             setResult(RESULT_OK, intent);
-            new OAuthTask(this).execute(access_token, expires_time);
+            new OAuthTask(this).execute(access_token, expires_time);  // 在里面弹出授权中提示框
         } else {
             Toast.makeText(OAuthActivity.this, getString(R.string.you_cancel_login),
                     Toast.LENGTH_SHORT).show();
