@@ -10,7 +10,6 @@ import android.nfc.NfcAdapter;
 import android.nfc.NfcEvent;
 import android.os.Bundle;
 import android.view.ViewConfiguration;
-import android.widget.Toast;
 
 import com.slidingmenu.lib.app.SlidingFragmentActivity;
 

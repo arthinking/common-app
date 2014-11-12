@@ -8,6 +8,7 @@ import java.util.Set;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
+import utils.GlobalContext;
 import android.app.ActionBar;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -28,6 +29,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.bean.AccountBean;
+import com.example.bean.GroupBean;
+import com.example.bean.MessageBean;
+import com.example.bean.MessageListBean;
+import com.example.bean.MessageReCmtCountBean;
+import com.example.bean.UserBean;
 
 /**
  * User: qii

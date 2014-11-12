@@ -8,35 +8,35 @@ package android.support.v7.appcompat;
 
 public final class R {
 	public static final class bool {
-		public static final int abc_action_bar_embed_tabs_pre_jb = 0x7f040001;
-		public static final int abc_action_bar_expanded_action_views_exclusive = 0x7f040000;
-		public static final int abc_config_allowActionMenuItemTextWithIcon = 0x7f040002;
+		public static final int abc_action_bar_embed_tabs_pre_jb = 0x7f070001;
+		public static final int abc_action_bar_expanded_action_views_exclusive = 0x7f070000;
+		public static final int abc_config_allowActionMenuItemTextWithIcon = 0x7f070002;
 	}
 	public static final class dimen {
-		public static final int abc_search_view_text_min_width = 0x7f060000;
-		public static final int dialog_fixed_height_major = 0x7f060003;
-		public static final int dialog_fixed_height_minor = 0x7f060004;
-		public static final int dialog_fixed_width_major = 0x7f060001;
-		public static final int dialog_fixed_width_minor = 0x7f060002;
+		public static final int abc_search_view_text_min_width = 0x7f090000;
+		public static final int dialog_fixed_height_major = 0x7f090003;
+		public static final int dialog_fixed_height_minor = 0x7f090004;
+		public static final int dialog_fixed_width_major = 0x7f090001;
+		public static final int dialog_fixed_width_minor = 0x7f090002;
 	}
 	public static final class integer {
-		public static final int abc_max_action_buttons = 0x7f050000;
+		public static final int abc_max_action_buttons = 0x7f080000;
 	}
 	public static final class string {
-		public static final int abc_action_bar_home_description = 0x7f070001;
-		public static final int abc_action_bar_home_description_format = 0x7f070004;
-		public static final int abc_action_bar_home_subtitle_description_format = 0x7f070005;
-		public static final int abc_action_bar_up_description = 0x7f070002;
-		public static final int abc_action_menu_overflow_description = 0x7f070003;
-		public static final int abc_action_mode_done = 0x7f070000;
-		public static final int abc_activity_chooser_view_see_all = 0x7f07000c;
-		public static final int abc_activitychooserview_choose_application = 0x7f07000b;
-		public static final int abc_searchview_description_clear = 0x7f070008;
-		public static final int abc_searchview_description_query = 0x7f070007;
-		public static final int abc_searchview_description_search = 0x7f070006;
-		public static final int abc_searchview_description_submit = 0x7f070009;
-		public static final int abc_searchview_description_voice = 0x7f07000a;
-		public static final int abc_shareactionprovider_share_with = 0x7f07000e;
-		public static final int abc_shareactionprovider_share_with_application = 0x7f07000d;
+		public static final int abc_action_bar_home_description = 0x7f050002;
+		public static final int abc_action_bar_home_description_format = 0x7f050005;
+		public static final int abc_action_bar_home_subtitle_description_format = 0x7f050006;
+		public static final int abc_action_bar_up_description = 0x7f050003;
+		public static final int abc_action_menu_overflow_description = 0x7f050004;
+		public static final int abc_action_mode_done = 0x7f050001;
+		public static final int abc_activity_chooser_view_see_all = 0x7f05000d;
+		public static final int abc_activitychooserview_choose_application = 0x7f05000c;
+		public static final int abc_searchview_description_clear = 0x7f050009;
+		public static final int abc_searchview_description_query = 0x7f050008;
+		public static final int abc_searchview_description_search = 0x7f050007;
+		public static final int abc_searchview_description_submit = 0x7f05000a;
+		public static final int abc_searchview_description_voice = 0x7f05000b;
+		public static final int abc_shareactionprovider_share_with = 0x7f05000f;
+		public static final int abc_shareactionprovider_share_with_application = 0x7f05000e;
 	}
 }
