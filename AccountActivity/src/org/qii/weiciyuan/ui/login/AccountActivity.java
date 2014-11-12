@@ -110,6 +110,7 @@ public class AccountActivity extends AbstractAppActivity
         listView.setOnItemClickListener(new AccountListItemClickListener());
         listView.setAdapter(listAdapter);
         listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE_MODAL);
+        // 通过ListView的setMultiChoiceModeListener()方法可以设置ListView.MultiChoiceModeListener监听器来帮助开发者进行多选处理s
         listView.setMultiChoiceModeListener(new AccountMultiChoiceModeListener());
         getLoaderManager().initLoader(LOADER_ID, null, this);
 
@@ -252,6 +253,7 @@ public class AccountActivity extends AbstractAppActivity
     @Override
     public void onLoadFinished(Loader<List<AccountBean>> loader, List<AccountBean> data) {
         accountList = data;
+        // Adapter数据加载完，调用notifyDataSetChanged() 通知UI刷新显示
         listAdapter.notifyDataSetChanged();
     }
 

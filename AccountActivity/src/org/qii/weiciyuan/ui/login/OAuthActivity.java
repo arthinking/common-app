@@ -259,6 +259,10 @@ public class OAuthActivity extends AbstractAppActivity {
 
         }
 
+        /**
+         * 该方法并不运行在UI线程当中，主要用于异步操作，所有在该方法中不能对UI当中的空间进行设置和修改  
+         * 但是可以调用publishProgress方法触发onProgressUpdate对UI进行操作 
+         */
         @Override
         protected DBResult doInBackground(String... params) {
 
