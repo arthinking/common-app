@@ -1,25 +1,15 @@
 package com.example.featuredimage;
 
-import android.app.ActionBar;
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.LocalBroadcastManager;
-import android.text.TextUtils;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.espian.showcaseview.ShowcaseView;
-import com.espian.showcaseview.targets.ViewTarget;
 import com.slidingmenu.lib.SlidingMenu;
+import com.slidingmenu.lib.app.SlidingFragmentActivity;
 
-public class MainActivity extends MainTimeLineParentActivity {
+public class MainActivity extends SlidingFragmentActivity {
 
     public static final int REQUEST_CODE_UPDATE_FRIENDS_TIMELINE_COMMENT_REPOST_COUNT = 0;
 
@@ -44,43 +34,16 @@ public class MainActivity extends MainTimeLineParentActivity {
         public void scrollToTop();
     }
 
-//    public static Intent newIntent() {
-//        return new Intent(GlobalContext.getInstance(), MainActivity.class);
-//    }
-
-//    public static Intent newIntent(AccountBean accountBean) {
-//        Intent intent = newIntent();
-//        intent.putExtra(BundleArgsConstants.ACCOUNT_EXTRA, accountBean);
-//        return intent;
-//    }
-
-    /*
-      notification bar
-     */
-//    public static Intent newIntent(AccountBean accountBean, MessageListBean mentionsWeiboData,
-//            CommentListBean mentionsCommentData, CommentListBean commentsToMeData,
-//            UnreadBean unreadBean) {
-//        Intent intent = newIntent();
-//        intent.putExtra(BundleArgsConstants.ACCOUNT_EXTRA, accountBean);
-//        intent.putExtra(BundleArgsConstants.MENTIONS_WEIBO_EXTRA, mentionsWeiboData);
-//        intent.putExtra(BundleArgsConstants.MENTIONS_COMMENT_EXTRA, mentionsCommentData);
-//        intent.putExtra(BundleArgsConstants.COMMENTS_TO_ME_EXTRA, commentsToMeData);
-//        intent.putExtra(BundleArgsConstants.UNREAD_EXTRA, unreadBean);
-//        return intent;
-//    }
-
-//    public String getToken() {
-//        return accountBean.getAccess_token();
-//    }
-
-
     public void setTitle(String title) {
+    	titleText.setText(title);
+    	/*
         if (TextUtils.isEmpty(title)) {
             titleText.setVisibility(View.GONE);
         } else {
             titleText.setText(title);
             titleText.setVisibility(View.VISIBLE);
         }
+        */
     }
 
     public void setTitle(int res) {
@@ -118,20 +81,17 @@ public class MainActivity extends MainTimeLineParentActivity {
 
     private void buildInterface(Bundle savedInstanceState) {
         // getActionBar().setTitle(GlobalContext.getInstance().getCurrentAccountName());
-    	// getActionBar().setTitle("推荐");  // 设置action bar标题
+    	getActionBar().setTitle("推荐");  // 设置action bar标题
         getWindow().setBackgroundDrawable(null);  // 设置背景图片
         setContentView(R.layout.menu_right);  // 设置主题布局
         boolean phone = findViewById(R.id.menu_frame) == null;  // 获取sliding menu 中的menu frame
-        if (phone) {
-            buildPhoneInterface(savedInstanceState);
-        } else {
-            buildPadInterface(savedInstanceState);
-        }
-
+        // 配置 SlidingMenu
+        buildPhoneInterface(savedInstanceState);
         // 设置自定义ActionBar的标题
         buildCustomActionBarTitle(savedInstanceState);
         
         // 初始化
+        /*
         if (savedInstanceState == null) {
             initFragments();
             FragmentTransaction secondFragmentTransaction = getSupportFragmentManager()
@@ -142,45 +102,21 @@ public class MainActivity extends MainTimeLineParentActivity {
             secondFragmentTransaction.commit();
         }
         // 配置sliding menu
-        configSlidingMenu(phone);
+         */
+        // configSlidingMenu(phone);
     }
 
     private void initFragments() {
+    	FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+    	/*
         Fragment friend = getFriendsTimeLineFragment();
-//        Fragment mentions = getMentionsTimeLineFragment();
-//        Fragment comments = getCommentsTimeLineFragment();
 
-//        Fragment fav = getFavFragment();
-//        Fragment myself = getMyProfileFragment();
-
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         if (!friend.isAdded()) {
             fragmentTransaction
                     .add(R.id.menu_right_fl, friend, FriendsTimeLineFragment.class.getName());
             fragmentTransaction.hide(friend);
         }
-//        if (!mentions.isAdded()) {
-//            fragmentTransaction.add(R.id.menu_right_fl, mentions, MentionsTimeLine.class.getName());
-//            fragmentTransaction.hide(mentions);
-//
-//        }
-//        if (!comments.isAdded()) {
-//            fragmentTransaction.add(R.id.menu_right_fl, comments, CommentsTimeLine.class.getName());
-//            fragmentTransaction.hide(comments);
-//
-//        }
-//
-//        if (!fav.isAdded()) {
-//            fragmentTransaction.add(R.id.menu_right_fl, fav, MyFavListFragment.class.getName());
-//            fragmentTransaction.hide(fav);
-//        }
-//
-//        if (!myself.isAdded()) {
-//            fragmentTransaction
-//                    .add(R.id.menu_right_fl, myself, UserInfoFragment.class.getName());
-//            fragmentTransaction.hide(myself);
-//        }
-
+        */
 
         if (!fragmentTransaction.isEmpty()) {
             fragmentTransaction.commit();
@@ -189,6 +125,7 @@ public class MainActivity extends MainTimeLineParentActivity {
     }
 
     private void configSlidingMenu(boolean phone) {
+    	/*
         SlidingMenu slidingMenu = getSlidingMenu();
         slidingMenu.setShadowWidthRes(R.dimen.shadow_width);
         slidingMenu.setShadowDrawable(R.drawable.shadow_slidingmenu);
@@ -224,12 +161,14 @@ public class MainActivity extends MainTimeLineParentActivity {
                         .sendBroadcast(new Intent(AppEventAction.SLIDING_MENU_CLOSED_BROADCAST));
             }
         });
+        */
     }
 
     private void buildCustomActionBarTitle(Bundle savedInstanceState) {
     	// LayoutInflater是用来找res/layout/下的xml布局文件，并且实例化；
     	// 而findViewById()是找xml布局文件下的具体widget控件(如Button、TextView等)
-        View title = getLayoutInflater().inflate(R.layout.maintimelineactivity_title_layout, null);
+    	View title = getLayoutInflater().inflate(R.layout.mainactivity_title_layout, null);
+    	/*
         titleText = (TextView) title.findViewById(R.id.tv_title);
         clickToTop = title.findViewById(R.id.tv_click_to_top);
         clickToTop.setOnClickListener(new View.OnClickListener() {
@@ -252,22 +191,21 @@ public class MainActivity extends MainTimeLineParentActivity {
                 Gravity.RIGHT);
         getActionBar().setCustomView(title, layoutParams);
         getActionBar().setDisplayShowCustomEnabled(true);
+        */
     }
 
     private void buildPhoneInterface(Bundle savedInstanceState) {
-        setBehindContentView(R.layout.menu_frame);
-        getSlidingMenu().setSlidingEnabled(true);
-        getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-        getActionBar().setDisplayHomeAsUpEnabled(true);
-        getSlidingMenu().setMode(SlidingMenu.LEFT);
-        getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
-    }
-
-    private void buildPadInterface(Bundle savedInstanceState) {
-        View v = new View(this);
-        setBehindContentView(v);
-        getSlidingMenu().setSlidingEnabled(false);
-        getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
+    	setBehindContentView(R.layout.menu_frame);  // 设置SlidingMenu使用的布局
+    	getSlidingMenu().setSlidingEnabled(true);  // 设置上方视图是否能够滑动
+    	// 设置SlidingMenu 的手势模式  
+        // TOUCHMODE_FULLSCREEN 全屏模式，在整个content页面中，滑动，可以打开SlidingMenu  
+        // TOUCHMODE_MARGIN 边缘模式，在content页面中，如果想打开SlidingMenu,你需要在屏幕边缘滑动才可以打开SlidingMenu  
+        // TOUCHMODE_NONE 不能通过手势打开SlidingMenu 
+    	getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+    	// 给左上角图标的左边加上一个返回的图标 。对应ActionBar.DISPLAY_HOME_AS_UP
+    	getActionBar().setDisplayHomeAsUpEnabled(true);  
+    	getSlidingMenu().setMode(SlidingMenu.LEFT); //设置左滑菜单
+    	getSlidingMenu().setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
     }
 
 
@@ -469,7 +407,7 @@ public class MainActivity extends MainTimeLineParentActivity {
 //                .updateNavigationPosition(GlobalContext.getInstance().getAccountBean(), result);
 //    }
 
-
+    /*
     public LeftMenuFragment getMenuFragment() {
         LeftMenuFragment fragment = ((LeftMenuFragment) getSupportFragmentManager()
                 .findFragmentByTag(
@@ -490,6 +428,7 @@ public class MainActivity extends MainTimeLineParentActivity {
         }
         return fragment;
     }
+	*/
 
 //    public MentionsTimeLine getMentionsTimeLineFragment() {
 //        MentionsTimeLine fragment = ((MentionsTimeLine) getSupportFragmentManager()

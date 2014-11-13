@@ -34,7 +34,7 @@ public final class R {
 	}
 	public static final class layout {
 		public static final int handy = 0x7f030016;
-		public static final int showcase_button = 0x7f03001a;
+		public static final int showcase_button = 0x7f03001c;
 	}
 	public static final class string {
 		public static final int ok = 0x7f050000;

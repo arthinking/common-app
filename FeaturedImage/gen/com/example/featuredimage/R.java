@@ -820,6 +820,10 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int windowSplitActionBar=0x7f01005c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int write_weibo=0x7f01007a;
     }
     public static final class bool {
         public static final int abc_action_bar_embed_tabs_pre_jb=0x7f070001;
@@ -853,10 +857,476 @@ containing a value of this type.
         public static final int abs__bright_foreground_disabled_holo_light=0x7f0a0005;
         public static final int abs__bright_foreground_holo_dark=0x7f0a0002;
         public static final int abs__bright_foreground_holo_light=0x7f0a0003;
-        public static final int abs__primary_text_disable_only_holo_dark=0x7f0a0006;
-        public static final int abs__primary_text_disable_only_holo_light=0x7f0a0007;
-        public static final int abs__primary_text_holo_dark=0x7f0a0008;
-        public static final int abs__primary_text_holo_light=0x7f0a0009;
+        public static final int abs__primary_text_disable_only_holo_dark=0x7f0a00ac;
+        public static final int abs__primary_text_disable_only_holo_light=0x7f0a00ad;
+        public static final int abs__primary_text_holo_dark=0x7f0a00ae;
+        public static final int abs__primary_text_holo_light=0x7f0a00af;
+        /** 蜜色 
+         */
+        public static final int aliceblue=0x7f0a0034;
+        /** 亚麻色 
+         */
+        public static final int antiquewhite=0x7f0a002a;
+        /** 中灰兰色 
+         */
+        public static final int aqua=0x7f0a008a;
+        /** 粟色 
+         */
+        public static final int aquamarine=0x7f0a006b;
+        /** 沙褐色
+         */
+        public static final int azure=0x7f0a0032;
+        /** 烟白色 
+         */
+        public static final int beige=0x7f0a002f;
+        /** 浅玫瑰色 
+         */
+        public static final int bisque=0x7f0a0015;
+        /** 海军色 
+         */
+        public static final int black=0x7f0a0099;
+        /** 番木色 
+         */
+        public static final int blanchedalmond=0x7f0a0013;
+        /** 暗绿色 
+         */
+        public static final int blue=0x7f0a0095;
+        /** 暗红色 
+         */
+        public static final int blueviolet=0x7f0a0063;
+        /** 暗灰色 
+         */
+        public static final int brown=0x7f0a0058;
+        /** 亮青色 
+         */
+        public static final int burlywood=0x7f0a003c;
+        /** 菊兰色 
+         */
+        public static final int cadetblue=0x7f0a0079;
+        /** 碧绿色
+         */
+        public static final int chartreuse=0x7f0a006c;
+        /** 茶色 
+         */
+        public static final int chocolate=0x7f0a0047;
+        /** 暗桔黄色 
+         */
+        public static final int coral=0x7f0a001f;
+        /** 中绿色 
+         */
+        public static final int cornflowerblue=0x7f0a0078;
+        /** 柠檬绸色 
+         */
+        public static final int cornsilk=0x7f0a000f;
+        /** 淡灰色 
+         */
+        public static final int crimson=0x7f0a003f;
+        /** 浅绿色 
+         */
+        public static final int cyan=0x7f0a008b;
+        public static final int dark_blue=0x7f0a009e;
+        /** 黑色 
+         */
+        public static final int dark_gray=0x7f0a009a;
+        /** theme
+         */
+        public static final int dark_theme_background=0x7f0a00a9;
+        /** 中兰色 
+         */
+        public static final int darkblue=0x7f0a0097;
+        /** 深天蓝色 
+         */
+        public static final int darkcyan=0x7f0a0091;
+        /** 中粉紫色 
+         */
+        public static final int darkgoldenrod=0x7f0a004f;
+        /** 亮蓝色 
+         */
+        public static final int darkgray=0x7f0a0056;
+        /** 绿色 
+         */
+        public static final int darkgreen=0x7f0a0094;
+        /** 暗灰色 
+         */
+        public static final int darkgrey=0x7f0a0057;
+        /** 银色 
+         */
+        public static final int darkkhaki=0x7f0a004c;
+        /** 重褐色 
+         */
+        public static final int darkmagenta=0x7f0a0061;
+        /** 军兰色 
+         */
+        public static final int darkolivegreen=0x7f0a007a;
+        /** 亮肉色 
+         */
+        public static final int darkorange=0x7f0a001e;
+        /** 赭色 
+         */
+        public static final int darkorchid=0x7f0a005a;
+        /** 暗洋红 
+         */
+        public static final int darkred=0x7f0a0062;
+        /** 紫罗兰色 
+         */
+        public static final int darksalmon=0x7f0a0039;
+        /** 亮绿色 
+         */
+        public static final int darkseagreen=0x7f0a005f;
+        /** 中绿宝石 
+         */
+        public static final int darkslateblue=0x7f0a007d;
+        /** 橙绿色 
+         */
+        public static final int darkslategray=0x7f0a0083;
+        /** 暗瓦灰色 
+         */
+        public static final int darkslategrey=0x7f0a0084;
+        /** 中春绿色 
+         */
+        public static final int darkturquoise=0x7f0a008f;
+        /** 苍绿色 
+         */
+        public static final int darkviolet=0x7f0a005c;
+        /** 红橙色 
+         */
+        public static final int deeppink=0x7f0a0023;
+        /** 暗宝石绿 
+         */
+        public static final int deepskyblue=0x7f0a0090;
+        /** 石蓝色 
+         */
+        public static final int dimgray=0x7f0a0075;
+        /** 暗灰色 
+         */
+        public static final int dimgrey=0x7f0a0076;
+        public static final int divide_line=0x7f0a009c;
+        /** 亮海蓝色 
+         */
+        public static final int dodgerblue=0x7f0a0088;
+        /** 暗金黄色 
+         */
+        public static final int firebrick=0x7f0a0050;
+        /** 雪白色 
+         */
+        public static final int floralwhite=0x7f0a000d;
+        /** 海绿色 
+         */
+        public static final int forestgreen=0x7f0a0086;
+        /** 深粉红色 
+         */
+        public static final int fuchsia=0x7f0a0024;
+        /** 洋李色 
+         */
+        public static final int gainsboro=0x7f0a003e;
+        /** 鲜肉色 
+         */
+        public static final int ghostwhite=0x7f0a002c;
+        /** 桃色 
+         */
+        public static final int gold=0x7f0a0019;
+        /** 苍紫罗兰色 
+         */
+        public static final int goldenrod=0x7f0a0041;
+        /** 天蓝色 
+         */
+        public static final int gray=0x7f0a0066;
+        /** 水鸭色 
+         */
+        public static final int green=0x7f0a0093;
+        /** 苍宝石绿 
+         */
+        public static final int greenyellow=0x7f0a0054;
+        /** 灰色 
+         */
+        public static final int grey=0x7f0a0067;
+        /** 天蓝色 
+         */
+        public static final int honeydew=0x7f0a0033;
+        public static final int host_background=0x7f0a00a3;
+        /** 珊瑚色 
+         */
+        public static final int hotpink=0x7f0a0020;
+        public static final int ics_blue_semi=0x7f0a00a2;
+        /** 秘鲁色 
+         */
+        public static final int indianred=0x7f0a0049;
+        /** 暗橄榄绿  
+         */
+        public static final int indigo=0x7f0a007b;
+        /** 白色 
+         */
+        public static final int ivory=0x7f0a0009;
+        /** 艾利斯兰 
+         */
+        public static final int khaki=0x7f0a0035;
+        /** 暗肉色 
+         */
+        public static final int lavender=0x7f0a003a;
+        /** 海贝色 
+         */
+        public static final int lavenderblush=0x7f0a0011;
+        /** 黄绿色 
+         */
+        public static final int lawngreen=0x7f0a006d;
+        /** 花白色 
+         */
+        public static final int lemonchiffon=0x7f0a000e;
+        public static final int light_orange=0x7f0a009b;
+        /** 黄绿色 
+         */
+        public static final int lightblue=0x7f0a0055;
+        /** 黄褐色 
+         */
+        public static final int lightcoral=0x7f0a0036;
+        /** 淡紫色 
+         */
+        public static final int lightcyan=0x7f0a003b;
+        /** 老花色 
+         */
+        public static final int lightgoldenrodyellow=0x7f0a0028;
+        /** 蓟色 
+         */
+        public static final int lightgray=0x7f0a0044;
+        /** 中紫色 
+         */
+        public static final int lightgreen=0x7f0a005e;
+        /** 亮灰色 
+         */
+        public static final int lightgrey=0x7f0a0045;
+        /** 粉红色 
+         */
+        public static final int lightpink=0x7f0a001b;
+        /** 橙色 
+         */
+        public static final int lightsalmon=0x7f0a001d;
+        /** 森林绿 
+         */
+        public static final int lightseagreen=0x7f0a0087;
+        /** 紫罗兰蓝色 
+         */
+        public static final int lightskyblue=0x7f0a0064;
+        /** 中暗蓝色 
+         */
+        public static final int lightslategray=0x7f0a006f;
+        /** 亮蓝灰 
+         */
+        public static final int lightslategrey=0x7f0a0070;
+        /** 粉蓝色 
+         */
+        public static final int lightsteelblue=0x7f0a0052;
+        /** 象牙色 
+         */
+        public static final int lightyellow=0x7f0a000a;
+        /** 春绿色
+         */
+        public static final int lime=0x7f0a008d;
+        /** 中海蓝 
+         */
+        public static final int limegreen=0x7f0a0082;
+        /** 亮金黄色 
+         */
+        public static final int linen=0x7f0a0029;
+        public static final int link_pressed_background_color_dark=0x7f0a00ab;
+        /** link
+         */
+        public static final int link_pressed_background_color_light=0x7f0a00aa;
+        public static final int list_divider_color=0x7f0a00a6;
+        public static final int listview_checked_color_holo_dark=0x7f0a009f;
+        public static final int listview_checked_color_holo_light=0x7f0a00a0;
+        public static final int listview_divide=0x7f0a009d;
+        public static final int listview_pic_background_dark=0x7f0a00a8;
+        public static final int listview_pic_background_light=0x7f0a00a7;
+        /** 紫红色 
+         */
+        public static final int magenta=0x7f0a0025;
+        /** 紫色 
+         */
+        public static final int maroon=0x7f0a006a;
+        /** 暗灰色 
+         */
+        public static final int mediumaquamarine=0x7f0a0077;
+        /** 蓝色 
+         */
+        public static final int mediumblue=0x7f0a0096;
+        /** 褐玫瑰红 
+         */
+        public static final int mediumorchid=0x7f0a004e;
+        /** 暗紫罗兰色 
+         */
+        public static final int mediumpurple=0x7f0a005d;
+        /** 青绿色 
+         */
+        public static final int mediumseagreen=0x7f0a0081;
+        /** 草绿色 
+         */
+        public static final int mediumslateblue=0x7f0a006e;
+        /** 酸橙色 
+         */
+        public static final int mediumspringgreen=0x7f0a008e;
+        /** 靛青色 
+         */
+        public static final int mediumturquoise=0x7f0a007c;
+        /** 印第安红 
+         */
+        public static final int mediumvioletred=0x7f0a004a;
+        /** 闪兰色 
+         */
+        public static final int midnightblue=0x7f0a0089;
+        /** 幽灵白 
+         */
+        public static final int mintcream=0x7f0a002d;
+        /** 白杏色 
+         */
+        public static final int mistyrose=0x7f0a0014;
+        /** 桔黄色 
+         */
+        public static final int moccasin=0x7f0a0016;
+        /** 鹿皮色 
+         */
+        public static final int navajowhite=0x7f0a0017;
+        /** 暗蓝色 
+         */
+        public static final int navy=0x7f0a0098;
+        /** 红色 
+         */
+        public static final int oldlace=0x7f0a0027;
+        /** 灰色 
+         */
+        public static final int olive=0x7f0a0068;
+        /** 灰石色 
+         */
+        public static final int olivedrab=0x7f0a0073;
+        /** 亮粉红色
+         */
+        public static final int orange=0x7f0a001c;
+        /** 西红柿色 
+         */
+        public static final int orangered=0x7f0a0022;
+        /** 金麒麟色 
+         */
+        public static final int orchid=0x7f0a0042;
+        /** 亮珊瑚色 
+         */
+        public static final int palegoldenrod=0x7f0a0037;
+        /** 暗紫色
+         */
+        public static final int palegreen=0x7f0a005b;
+        /** 亮钢兰色 
+         */
+        public static final int paleturquoise=0x7f0a0053;
+        /** 暗深红色 
+         */
+        public static final int palevioletred=0x7f0a0040;
+        /** 淡紫红 
+         */
+        public static final int papayawhip=0x7f0a0012;
+        /** 纳瓦白 
+         */
+        public static final int peachpuff=0x7f0a0018;
+        /** 巧可力色 
+         */
+        public static final int peru=0x7f0a0048;
+        /** 金色 
+         */
+        public static final int pink=0x7f0a001a;
+        /** 实木色 
+         */
+        public static final int plum=0x7f0a003d;
+        /** 火砖色 
+         */
+        public static final int powderblue=0x7f0a0051;
+        public static final int progress_horizontal_progress=0x7f0a00a1;
+        /** 橄榄色 
+         */
+        public static final int purple=0x7f0a0069;
+        /** 红紫色 
+         */
+        public static final int red=0x7f0a0026;
+        /** 暗黄褐色 
+         */
+        public static final int rosybrown=0x7f0a004d;
+        /** 钢兰色 
+         */
+        public static final int royalblue=0x7f0a007f;
+        /** 暗海兰色 
+         */
+        public static final int saddlebrown=0x7f0a0060;
+        /** 古董白 
+         */
+        public static final int salmon=0x7f0a002b;
+        /** 浅黄色 
+         */
+        public static final int sandybrown=0x7f0a0031;
+        /** 暗瓦灰色 
+         */
+        public static final int seagreen=0x7f0a0085;
+        /** 米绸色 
+         */
+        public static final int seashell=0x7f0a0010;
+        /** 褐色 
+         */
+        public static final int sienna=0x7f0a0059;
+        /** 中紫罗兰色 
+         */
+        public static final int silver=0x7f0a004b;
+        /** 亮天蓝色 
+         */
+        public static final int skyblue=0x7f0a0065;
+        /** 深绿褐色 
+         */
+        public static final int slateblue=0x7f0a0074;
+        /** 亮蓝灰 
+         */
+        public static final int slategray=0x7f0a0071;
+        /** 灰石色 
+         */
+        public static final int slategrey=0x7f0a0072;
+        /** 黄色 
+         */
+        public static final int snow=0x7f0a000c;
+        /** 青色 
+         */
+        public static final int springgreen=0x7f0a008c;
+        /** 暗灰蓝色 
+         */
+        public static final int steelblue=0x7f0a007e;
+        /** 亮灰色 
+         */
+        public static final int tan=0x7f0a0046;
+        /** 暗青色 
+         */
+        public static final int teal=0x7f0a0092;
+        /** 淡紫色 
+         */
+        public static final int thistle=0x7f0a0043;
+        /** 热粉红色 
+         */
+        public static final int tomato=0x7f0a0021;
+        /** TopTipBar error color
+         */
+        public static final int top_tip_bar_error=0x7f0a00a4;
+        public static final int top_tip_bar_tip=0x7f0a00a5;
+        /** template
+         */
+        public static final int transparent=0x7f0a0006;
+        public static final int transparent_cover=0x7f0a0007;
+        /** 皇家蓝 
+         */
+        public static final int turquoise=0x7f0a0080;
+        /** 苍麒麟色 
+         */
+        public static final int violet=0x7f0a0038;
+        /** 米色 
+         */
+        public static final int wheat=0x7f0a0030;
+        public static final int white=0x7f0a0008;
+        /** 薄荷色 
+         */
+        public static final int whitesmoke=0x7f0a002e;
+        /** 亮黄色
+         */
+        public static final int yellow=0x7f0a000b;
     }
     public static final class dimen {
         /**  Minimum width of the search view text entry area. 
@@ -1147,7 +1617,8 @@ containing a value of this type.
         public static final int abs__textButton=0x7f04001b;
         public static final int abs__title=0x7f040023;
         public static final int abs__up=0x7f040013;
-        public static final int action_settings=0x7f04003d;
+        public static final int action_settings=0x7f040040;
+        public static final int btn_write=0x7f04003c;
         public static final int disableHome=0x7f040011;
         public static final int edit_query=0x7f04002e;
         public static final int fullscreen=0x7f040006;
@@ -1155,8 +1626,8 @@ containing a value of this type.
         public static final int left=0x7f040003;
         public static final int listMode=0x7f04000a;
         public static final int margin=0x7f040005;
-        public static final int menu_frame=0x7f04003a;
-        public static final int menu_right_fl=0x7f04003b;
+        public static final int menu_frame=0x7f04003d;
+        public static final int menu_right_fl=0x7f04003e;
         public static final int normal=0x7f040009;
         public static final int right=0x7f040004;
         public static final int selected_view=0x7f040007;
@@ -1166,8 +1637,10 @@ containing a value of this type.
         public static final int showcase_button=0x7f040000;
         public static final int showcase_sub_text=0x7f040002;
         public static final int showcase_title_text=0x7f040001;
-        public static final int slidingmenumain=0x7f04003c;
+        public static final int slidingmenumain=0x7f04003f;
         public static final int tabMode=0x7f04000b;
+        public static final int tv_click_to_top=0x7f04003b;
+        public static final int tv_title=0x7f04003a;
         public static final int useLogo=0x7f04000c;
         public static final int wrap_content=0x7f040008;
     }
@@ -1212,11 +1685,13 @@ containing a value of this type.
         public static final int abs__simple_dropdown_hint=0x7f030014;
         public static final int activity_main=0x7f030015;
         public static final int handy=0x7f030016;
-        public static final int menu_right=0x7f030017;
-        public static final int sherlock_spinner_dropdown_item=0x7f030018;
-        public static final int sherlock_spinner_item=0x7f030019;
-        public static final int showcase_button=0x7f03001a;
-        public static final int slidingmenumain=0x7f03001b;
+        public static final int mainactivity_title_layout=0x7f030017;
+        public static final int menu_frame=0x7f030018;
+        public static final int menu_right=0x7f030019;
+        public static final int sherlock_spinner_dropdown_item=0x7f03001a;
+        public static final int sherlock_spinner_item=0x7f03001b;
+        public static final int showcase_button=0x7f03001c;
+        public static final int slidingmenumain=0x7f03001d;
     }
     public static final class menu {
         public static final int main=0x7f0b0000;
@@ -1812,6 +2287,7 @@ containing a value of this type.
         public static final int your_token_is_expired=0x7f050028;
     }
     public static final class style {
+        public static final int ActionBar_Title_Text=0x7f060062;
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
